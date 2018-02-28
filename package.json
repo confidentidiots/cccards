@@ -1,0 +1,22 @@
+{
+  "name": "cardmaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "npm": "^5.6.0"
+  },
+  "devDependencies": {
+    "google-spreadsheet-to-json": "^1.0.0",
+    "node-sass": "^4.7.2"
+  }
+}

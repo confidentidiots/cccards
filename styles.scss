@@ -1,0 +1,97 @@
+$brand: #0076c9;
+$accent: #C97700;
+$bg: lightgray;
+$bgd: darken($bg, 5%);
+$phi: 1.61803398875;
+$border: 3px solid $brand;
+
+$cardwidth: 15em;
+$cardheight: $cardwidth * $phi;
+$imgwidth: $cardwidth - 0.5em;
+$imgheight: $imgwidth / 2;
+
+body {
+    background: $bg;
+    color: $brand;
+    //font-family: 'Nanum Pen Script', cursive;
+    //font-family: 'Amatic SC', cursive;
+    //font-family: 'Shadows Into Light', cursive;
+    //font-family: 'Nova Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
+
+    font-weight: normal;
+    font-size: 1.5em;
+    //font: normal 1.5em/1.1 'Nanum Pen Script', cursive;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    box-shadow: 12px 12px 20px 2px $bgd;
+    background: white;
+    width: $cardwidth;
+    height: $cardheight;
+    border: 1px solid $bgd;
+    padding: 1em;
+    position: relative;
+}
+.card img {
+    width: $imgwidth;
+    height: $imgheight;
+    border: $border;
+    display: block;
+    //margin-left: auto;
+    //margin-right: auto;
+}
+
+.stat {
+    //border: 1px solid $brand;
+    position: absolute;
+    bottom: 2em;
+    width: $imgwidth;
+    height: 2em;
+    //padding-top: 0.5em;
+}
+
+.power {
+    padding: 0.5em;
+    border: $border;
+}
+.defense {
+    padding: 0.5em;
+    border: $border;
+    background: $brand;
+    color: white;
+}
+.stubs {
+    margin-bottom: 3em;
+    float: right;
+    font-size: 3em;
+    //padding: 0.1em;
+}
+
+.stubs::before {
+    //content: '\1F39F';
+    //content: '\1F3AB  x ';
+}
+
+.name {
+    //text-decoration: underline dashed $brand;
+}
+
+.description {
+    color: $accent;
+}
+
+.flavour {
+    font-size: 0.707em;
+}
+.flavour:before {
+    content: '“';
+    font-size: 2.4em;
+}

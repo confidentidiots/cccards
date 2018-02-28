@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="cardMakerApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>cardmaker</title>
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+       -->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+  <link rel="stylesheet" href="/dist/cardmaker.css"></head>
+  <body>
+
+    <div class="cards" data-ng-controller="MainController as vm">
+      <div ng-repeat="card in vm.cards">
+        <div class="card">
+          <img ng-src="{{card.img}}">
+          <h1 class="name">{{card.name}}
+          </h1>
+          <p class="flavour">
+            {{card.flavour}}
+          </p>
+          <p class="description" ng-show="card.class">
+            {{card.class}} &mdash; {{card.description}}
+          </p>
+          <span class="stat">
+
+            <span class="power" ng-show="card.power">
+            {{card.power}}
+            </span>
+
+            <span class="defense" ng-show="card.defense">
+              {{card.defense}}
+            </span>
+
+            <span class="stubs">
+              {{card.stubs}}
+            </span>
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="/dist/cardmaker.js"></script>
+    <script src="/dist/a0c63bcce90a943f6d33101598cb649e.js"></script>
+</body>
+</html>
