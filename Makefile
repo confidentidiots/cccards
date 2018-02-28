@@ -1,8 +1,11 @@
-.PHONY: run cards
+.PHONY: run dist cards
 
-run:
+dist:
 	mkdir -p docs
 	touch docs/_config.yml
+	npm run dist
+
+run:
 	npm run start
 
 cards:

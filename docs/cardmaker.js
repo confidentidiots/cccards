@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({8:[function(require,module,exports) {
+})({11:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],5:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,15 +132,15 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":8}],4:[function(require,module,exports) {
+},{"./bundle-url":11}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],3:[function(require,module,exports) {
+},{"_css_loader":6}],2:[function(require,module,exports) {
 module.exports = [{"name":"nail varnish","stubs":1,"power":2,"defense":5,"flavour":"chemical plant in a bottle; a real nose-piercer","class":"proximity","description":"damage to all","img":"http://assets.goodhousekeeping.co.uk/main/embedded/29473/nail-polish-layers-goodhousekeepinguk.jpg"},{"name":"elbow wrestle","stubs":1,"power":1,"defense":1,"flavour":"a sure way of marking your territory","img":"http://www.inspiringinterns.com/blog/wp-content/uploads/2012/10/commute.jpg"},{"name":"wink","stubs":1,"power":3,"flavour":"disarms even the grumpiest grizzly","class":"kindness","description":"disarms a card, and both is removed from the arena","img":"https://theproductpro.files.wordpress.com/2013/09/woman-winking.jpg"},{"name":"unattended bag","stubs":5,"power":3,"defense":10,"flavour":"strikes terror in the heart of everyone","class":"trap","description":"takes effect on next opponent attack","img":"https://images-na.ssl-images-amazon.com/images/I/81qyEQCCvsL._SY355_.jpg"}];
-},{}],7:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 /**
  * @license AngularJS v1.6.9
  * (c) 2010-2018 Google, Inc. http://angularjs.org
@@ -34500,11 +34500,11 @@ $provide.value("$locale", {
 })(window);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],6:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 require('./angular');
 module.exports = angular;
 
-},{"./angular":7}],2:[function(require,module,exports) {
+},{"./angular":10}],3:[function(require,module,exports) {
 'use strict';
 
 require('./styles.scss');
@@ -34523,7 +34523,7 @@ angular.module('cardMakerApp').controller('MainController', [function () {
     var vm = this;
     vm.cards = _cards2.default;
 }]);
-},{"./styles.scss":4,"./cards.json":3,"angular":6}],9:[function(require,module,exports) {
+},{"./styles.scss":5,"./cards.json":2,"angular":8}],14:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -34545,7 +34545,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54895' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56230' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -34646,5 +34646,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[9,2])
-//# sourceMappingURL=/docs/cardmaker.map
+},{}]},{},[14,3])
+//# sourceMappingURL=/cardmaker.map
