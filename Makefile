@@ -1,4 +1,9 @@
-.PHONY: cards
+.PHONY: run cards
+
+run:
+	mkdir -p docs
+	touch docs/_config.yml
+	npm run start
 
 cards:
 	@echo "downloading latest cards"

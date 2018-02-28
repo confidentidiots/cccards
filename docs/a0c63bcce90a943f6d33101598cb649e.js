@@ -71,9 +71,9 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({6:[function(require,module,exports) {
+})({3:[function(require,module,exports) {
 module.exports = [{"name":"nail varnish","stubs":1,"power":2,"defense":5,"flavour":"chemical plant in a bottle; a real nose-piercer","class":"proximity","description":"damage to all","img":"http://assets.goodhousekeeping.co.uk/main/embedded/29473/nail-polish-layers-goodhousekeepinguk.jpg"},{"name":"elbow wrestle","stubs":1,"power":1,"defense":1,"flavour":"a sure way of marking your territory","img":"http://www.inspiringinterns.com/blog/wp-content/uploads/2012/10/commute.jpg"},{"name":"wink","stubs":1,"power":3,"flavour":"disarms even the grumpiest grizzly","class":"kindness","description":"disarms a card, and both is removed from the arena","img":"https://theproductpro.files.wordpress.com/2013/09/woman-winking.jpg"},{"name":"unattended bag","stubs":5,"power":3,"defense":10,"flavour":"strikes terror in the heart of everyone","class":"trap","description":"takes effect on next opponent attack","img":"https://images-na.ssl-images-amazon.com/images/I/81qyEQCCvsL._SY355_.jpg"}];
-},{}],14:[function(require,module,exports) {
+},{}],9:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -95,7 +95,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54107' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54895' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -196,5 +196,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[14,6])
+},{}]},{},[9,3])
 //# sourceMappingURL=/docs/a0c63bcce90a943f6d33101598cb649e.map
