@@ -12,8 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.9",
-    "npm": "^5.6.0"
+    "angular": "^1.6.9"
   },
   "devDependencies": {
     "google-spreadsheet-to-json": "^1.0.0",
