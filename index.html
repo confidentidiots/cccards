@@ -17,30 +17,31 @@
     <div class="cards" data-ng-controller="MainController as vm">
       <div ng-repeat="card in vm.cards">
         <div class="card">
+          <span class="stubs">
+            {{card.stubs}}
+          </span>
+
           <img ng-src="{{card.img}}"/>
-          <h1 class="name">{{card.name}}
-          </h1>
+
+          <h1 class="name">{{card.name}}</h1>
+
           <p class="flavour">
             {{card.flavour}}
           </p>
+
           <p class="description" ng-show="card.class">
             {{card.class}} &mdash; {{card.description}}
           </p>
-          <span class="stat">
 
-            <span class="power" ng-show="card.power">
+          <span class="stat">
+            <span class="power">
             {{card.power}}
             </span>
-
-            <span class="defense" ng-show="card.defense">
+            <span class="defense">
               {{card.defense}}
             </span>
-
-            <span class="stubs">
-              {{card.stubs}}
-            </span>
-
           </span>
+
         </div>
       </div>
     </div>

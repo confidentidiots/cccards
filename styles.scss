@@ -71,10 +71,15 @@ body {
     color: white;
 }
 .stubs {
-    margin-bottom: 3em;
-    float: right;
-    font-size: 3em;
+    position: absolute;
+    top: 0.12em;
+    right: 0.125em;
+    font-size: 2.5em;
     //padding: 0.1em;
+    background-color: white;
+    border: $border;
+    border-radius: 1em;
+    padding: 0.1em;
 }
 
 .stubs::before {
