@@ -15,7 +15,7 @@
   <body>
 
     <div class="cards" data-ng-controller="MainController as vm">
-      <div ng-repeat="card in vm.cards">
+      <div ng-repeat="card in vm.cards" ng-hide="card.disabled">
         <div class="card">
           <span class="stubs">
             {{card.stubs}}
