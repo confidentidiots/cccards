@@ -16,9 +16,15 @@
 
     <p>cards for the game <a href="https://confidentidiots.com/contumacious/">contumacious commuter</a>.</p>
 
+    <div data-ng-controller="ToolsController as vm">
+      <p>
+        <a href="" ng-click="vm.download()">download datafile</a>
+      </p>
+    </div>
+
     <div class="cards" data-ng-controller="MainController as vm">
       <div ng-repeat="card in vm.cards" ng-hide="card.disabled">
-        <div class="card">
+        <div class="card" id="{{card.id}}">
           <span class="stubs">
             {{card.stubs}}
           </span>
