@@ -3,6 +3,7 @@
 dist:
 	mkdir -p docs
 	touch docs/_config.yml
+	perl -pi -e 's/\(version .*?\)/\(version '$(date "%Y-%m-%d %H:%M:%S")' \)' index.html
 	npm run dist
 
 run:
