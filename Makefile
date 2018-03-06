@@ -3,8 +3,8 @@
 dist:
 	mkdir -p docs
 	touch docs/_config.yml
-	./version.sh
 	npm run dist
+	./version.sh
 	./cachebust.sh
 
 run:
