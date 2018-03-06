@@ -5,6 +5,7 @@ dist:
 	touch docs/_config.yml
 	./version.sh
 	npm run dist
+	./cachebust.sh
 
 run:
 	npm run start
