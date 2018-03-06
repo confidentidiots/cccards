@@ -9,7 +9,9 @@ angular.module('cardMakerApp', []);
 
 angular.module('cardMakerApp').controller('MainController', [function() {
     var vm = this;
-    vm.cards = cards;
+    vm.cards = _.filter(cards, function (it) {
+        return !(it.hasOwnProperty('disabled') && it.disabled);
+    });
 }]);
 angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q) {
     var vm = this;
