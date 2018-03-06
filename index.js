@@ -24,7 +24,7 @@ angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q)
 
     function divToData(cardDiv) {
         var future = $q.defer();
-        html2canvas(cardDiv, {logging: false, useCORS: true}).then(function(canvas) {
+        html2canvas(cardDiv, {logging: false, useCORS: false}).then(function(canvas) {
             var imgData = canvas.toDataURL("image/png");
             var cardJson = indexedCards[cardDiv.id];
             cardJson.cardImg = imgData;
