@@ -33,7 +33,9 @@ angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q)
         return future.promise;
     }
     function downloadAsJson(obj) {
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+        var jsStr = JSON.stringify(obj);
+        console.log('bytes', jsStr.length);
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(jsStr);
         var dlAnchorElem = document.createElement('a');
         dlAnchorElem.setAttribute("href", dataStr);
         dlAnchorElem.setAttribute("download", "carddata.json");
