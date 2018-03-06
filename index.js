@@ -24,7 +24,7 @@ angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q)
 
     function divToData(cardDiv) {
         var future = $q.defer();
-        html2canvas(cardDiv, {logging: false}).then(function(canvas) {
+        html2canvas(cardDiv, {logging: false, useCORS: true}).then(function(canvas) {
             var imgData = canvas.toDataURL("image/png");
             var cardJson = indexedCards[cardDiv.id];
             cardJson.cardImg = imgData;
@@ -41,7 +41,7 @@ angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q)
     }
     function downloadAll() {
         var cardDivs = document.getElementsByClassName('card');
-        console.log('found cards', cardDivs.length);
+        console.log('downloading', cardDivs.length, 'cards');
         var promises = [];
         for(var i = 0; i < cardDivs.length; i++) {
             var cardDiv = cardDivs[i];
