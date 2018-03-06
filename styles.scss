@@ -102,3 +102,17 @@ body {
     content: '“';
     font-size: 2.4em;
 }
+
+/* back face */
+.backface {
+    background-color: $accent;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+.backface span {
+    font-size: 5em;
+    word-wrap:break-word;
+    text-transform: uppercase;
+    border-bottom: 10px solid white;;
+}

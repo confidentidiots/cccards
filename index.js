@@ -14,11 +14,17 @@ angular.module('cardMakerApp').controller('MainController', [function() {
 angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q) {
     var vm = this;
 
+    var indexedCards = _.keyBy(cards, 'id');
+    indexedCards['backface'] = {
+        id: 'backface',
+        name: 'back face'
+    };
+
     function divToData(cardDiv) {
         var future = $q.defer();
-        html2canvas(cardDiv).then(function(canvas) {
+        html2canvas(cardDiv, {logging: false}).then(function(canvas) {
             var imgData = canvas.toDataURL("image/png");
-            var cardJson = _.find(cards, 'id', cardDiv.id);
+            var cardJson = indexedCards[cardDiv.id];
             cardJson.cardImg = imgData;
             future.resolve(cardJson);
         });
@@ -33,6 +39,7 @@ angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q)
     }
     function downloadAll() {
         var cardDivs = document.getElementsByClassName('card');
+        console.log('found cards', cardDivs.length);
         var promises = [];
         for(var i = 0; i < cardDivs.length; i++) {
             var cardDiv = cardDivs[i];

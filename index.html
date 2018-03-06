@@ -23,6 +23,12 @@
     </div>
 
     <div class="cards" data-ng-controller="MainController as vm">
+      <!-- back of card -->
+      <div class="card backface" id="backface">
+        <span>ContumaciousCommuter</span>
+      </div>
+
+      <!-- playing cards -->
       <div ng-repeat="card in vm.cards" ng-hide="card.disabled">
         <div class="card" id="{{card.id}}">
           <span class="stubs">
