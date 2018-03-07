@@ -1,4 +1,4 @@
-angular.module('cardMakerApp').controller('ToolsController', ['$q', 'cards', '_', function($q, cards, _) {
+angular.module('cardMakerApp').controller('ToolsController', ['$q', 'cards', '_', 'html2canvas', function($q, cards, _, html2canvas) {
     var vm = this;
     var html2canvasOpts = {
         logging: false

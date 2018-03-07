@@ -8,3 +8,4 @@ import _ from 'lodash';
 angular.module('cardMakerApp', []);
 angular.module('cardMakerApp').constant('cards', cards);
 angular.module('cardMakerApp').constant('_', _);
+angular.module('cardMakerApp').constant('html2canvas', html2canvas);
