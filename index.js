@@ -15,6 +15,12 @@ angular.module('cardMakerApp').controller('MainController', [function() {
 }]);
 angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q) {
     var vm = this;
+    var html2canvasOpts = {
+        logging: false
+    };
+    if (window.location.href.indexOf('://localhost/') !== -1) {
+        html2canvasOpts.useCORS = false;
+    }
 
     var indexedCards = _.keyBy(cards, 'id');
     indexedCards['backface'] = {
@@ -24,7 +30,7 @@ angular.module('cardMakerApp').controller('ToolsController', ['$q', function($q)
 
     function divToData(cardDiv) {
         var future = $q.defer();
-        html2canvas(cardDiv, {logging: false, useCORS: true}).then(function(canvas) {
+        html2canvas(cardDiv, html2canvasOpts).then(function(canvas) {
             var imgData = canvas.toDataURL("image/png");
             var cardJson = indexedCards[cardDiv.id];
             cardJson.cardImg = imgData;
