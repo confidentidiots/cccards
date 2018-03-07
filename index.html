@@ -25,37 +25,41 @@
 
       <!-- playing cards -->
       <div ng-repeat="card in vm.cards">
-        <div class="card" id="{{card.id}}">
-          <span class="stubs">
-            {{card.stubs}}
-          </span>
-
-          <img ng-src="{{card.img}}"/>
-
-          <h1 class="name">{{card.name}}</h1>
-
-          <p class="flavour">
-            {{card.flavour}}
-          </p>
-
-          <p class="description" ng-show="card.class">
-            {{card.class}} &mdash; {{card.description}}
-          </p>
-
-          <span class="stat">
-            <span class="power">
-            {{card.power}}
-            </span>
-            <span class="defense">
-              {{card.defense}}
-            </span>
-          </span>
-
-        </div>
+        <card it="card"></card>
       </div>
     </div>
 
+    <script type="text/ng-template" id="card.html">
+      <div class="card" id="{{card.id}}">
+        <span class="stubs">
+          {{card.stubs}}
+        </span>
+
+        <img ng-src="{{card.img}}"/>
+
+        <h1 class="name">{{card.name}}</h1>
+
+        <p class="flavour">
+          {{card.flavour}}
+        </p>
+
+        <p class="description" ng-show="card.class">
+          {{card.class}} &mdash; {{card.description}}
+        </p>
+
+        <span class="stat">
+          <span class="power">
+          {{card.power}}
+          </span>
+          <span class="defense">
+            {{card.defense}}
+          </span>
+        </span>
+      </div>
+    </script>
+
     <script src="index.js"></script>
+    <script src="src/card.js"></script>
     <script src="cards.json"></script>
 </body>
 </html>
